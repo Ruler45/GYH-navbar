@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>GYH-Navbar</title>
+    <script
+      src="https://kit.fontawesome.com/3a5f3c0ea0.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <div class="contact-details">
+        <div class="phone">
+          <i class="fa-solid fa-phone-flip" style="color: #ffd43b"></i>
+          (+91)9999999999
+        </div>
+        <div class="line"></div>
+        <div class="mail">
+          <i class="fa-regular fa-envelope" style="color: #ffd43b"></i>
+          random@mail.com
+        </div>
+      </div>
+      <div class="social-media">
+        <div class="line"></div>
+        <span>Register</span>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-facebook-f"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-linkedin-in"></i>
+      </div>
+    </header>
+    <nav>
+      <div class="logo">Get Your <span class="text-blue">Homes</span></div>
+      <div class="search-bar">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Search" />
+        <i class="fa-solid fa-microphone sm-inline none"></i>
+      </div>
+      <ul class="nav-links">
+        <li class="navlink">About</li>
+        <li class="navlink">Help</li>
+        <li class="navlink">Request</li>
+        <li class="navlink">
+          <select name="more" id="more">
+            <option value="more">More1</option>
+            <option value="more">More2</option>
+            <option value="more">More3</option>
+            <option value="more">More4</option>
+          </select>
+        </li>
+      </ul>
+      <div class="sign-up-container">
+        <button class="btn">Sign Up</button>
+        <div class="user">
+          <i class="fa-regular fa-user user"></i>
+        </div>
+      </div>
+    </nav>
+    <div class="scroller"></div>
+  </body>
+  <script>
+    const search = document.querySelector(".search-bar");
+
+    window.addEventListener("scroll", () => {
+      if (window.innerWidth < 768 && window.scrollY > 50) {
+        search.classList.add("fixed-after-scroll");
+      } else {
+        search.classList.remove("fixed-after-scroll");
+      }
+    });
+
+    console.log(window.innerWidth);
+  </script>
+</html>

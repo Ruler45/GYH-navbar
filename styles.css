@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  position: relative;
+}
+/* some resets */
+
+li {
+  list-style: none;
+}
+
+select {
+  border: 0 none #ccc;
+  border-radius: 5px;
+}
+
+/* Main classes */
+/* Navbar start */
+nav {
+  display: flex;
+  width: 100vw;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.logo {
+  font-size: 3vw;
+  font-weight: 700;
+  color: #333;
+  display: flex;
+}
+.text-blue {
+  color: #007bff;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 30%;
+  max-width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 0.2rem;
+  flex-direction: row-reverse;
+}
+.search-bar input {
+  border: 0 none;
+  padding: 0.5rem;
+  width: 100%;
+  border-radius: 5px;
+}
+.sign-up-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  border: 0 none;
+  border-radius: 1rem;
+  background-color: #121f4b;
+  color: #fff;
+}
+.user {
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  padding: 0.2rem;
+}
+.none {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  nav > .logo {
+    grid-area: logo;
+    font-size: 5vw;
+  }
+  nav > .sign-up-container {
+    grid-area: sign-up-container;
+  }
+  nav > .search-bar {
+    grid-area: search-bar;
+    flex-direction: row;
+    max-width: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transition: all 0.5s ease-in-out;
+  }
+  nav {
+    display: grid;
+    grid-template-areas:
+      "logo sign-up-container"
+      "search-bar search-bar";
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    position: static;
+  }
+  .nav-links {
+    display: none;
+  }
+  .sm-inline {
+    display: inline;
+  }
+}
+.fixed-after-scroll {
+  position: fixed;
+  max-width: 95% !important;
+  top: 1rem;
+  margin: 0.5rem 2vw;
+  z-index: 1000;
+}
+/* navbar end */
+
+/* Header starts */
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  background-color: #121f4b;
+  color: white;
+}
+.contact-details {
+  display: flex;
+  gap: 1rem;
+}
+.line {
+  border-right: 1px solid #fff;
+  height: 100%;
+  width: 1px;
+  display: flex;
+}
+.social-media {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    display: none;
+  }
+}
+
+.scroller {
+  height: 200vh;
+}
